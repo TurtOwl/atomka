@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reactor Status</title>
+</head>
+<body>
+<h1>Reactor Status</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Temperature</th>
+        <th>Pressure</th>
+        <th>Power</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="reactor : ${reactors}">
+        <td th:text="${reactor.name}"></td>
+        <td th:text="${reactor.temperature}"></td>
+        <td th:text="${reactor.pressure}"></td>
+        <td th:text="${reactor.power}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
